@@ -12,7 +12,7 @@ function Landing() {
   return (
     <>
       <header>
-        {/* <img src={Logo_Vit} alt="Logo" /> */}
+        <img src={Logo_Vit} alt="Logo" />
         <div className="menu">
           <NavLink to="/OmOss"><h1>Om Oss</h1></NavLink>
           <NavLink to="/Contact"><h1>Kontakt</h1></NavLink>
