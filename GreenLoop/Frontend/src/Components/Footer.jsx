@@ -1,4 +1,5 @@
 import '../Style/Footer.css';
+import { NavLink } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -6,9 +7,10 @@ function Footer() {
       <div className="footer-content">
         <p>&copy; {new Date().getFullYear()} GreenLoop. All rights reserved.</p>
         <div className="footer-links">
-          <a href="#">Om Oss</a>
-          <a href="#">Kontakt</a>
-          <a href="#">Integritetspolicy</a>
+          <NavLink to="/" className="text-white text-lg">Home</NavLink>
+          <NavLink to="/OmOss" className="text-white text-lg">Om Oss</NavLink>
+          <NavLink to="/Contact" className="text-white text-lg">Kontakt</NavLink>
+          <NavLink to="/Produkter" className="text-white text-lg">Produkter</NavLink>
         </div>
       </div>
     </footer>

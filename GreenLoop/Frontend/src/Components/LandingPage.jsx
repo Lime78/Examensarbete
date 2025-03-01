@@ -14,6 +14,7 @@ function Landing() {
       <header>
         <img src={Logo_Vit} alt="Logo" />
         <div className="menu">
+          <NavLink to="/"><h1>Home</h1></NavLink>
           <NavLink to="/OmOss"><h1>Om Oss</h1></NavLink>
           <NavLink to="/Contact"><h1>Kontakt</h1></NavLink>
           <NavLink to="/Produkter"><h1>Produkter</h1></NavLink>
@@ -37,9 +38,11 @@ function Landing() {
         <p>Kategorier</p>
       </div>
       <div className="Category">
-        <button>Elektronik</button>
-        <button>Möbler</button>
-        <button>Kläder</button>
+        <button>Priser</button>
+        <button>Utbud</button>
+        <button>Miljö</button>
+        
+        
       </div>
       
     </>

@@ -12,6 +12,7 @@ function Contact() {
     <header>
         <img src={Logo_Vit} alt="Logo" />
         <div className="menu">
+        <NavLink to="/"><h1>Home</h1></NavLink>
           <NavLink to="/OmOss"><h1>Om Oss</h1></NavLink>
           <NavLink to="/Contact"><h1>Kontakt</h1></NavLink>
           <NavLink to="/Produkter"><h1>Produkter</h1></NavLink>

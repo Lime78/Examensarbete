@@ -20,6 +20,10 @@ header {
     border-radius: 5px;
 }
 
+.menu a {
+    text-decoration: none; 
+}
+
 .menu h1 {
     margin: 0 10px;
     font-size: 1.6em;
@@ -60,7 +64,8 @@ header {
 .Category button {
     font-size: 1.5rem; 
     padding: 20px 50px;
-    background-color: #A0E1CA;
+    background-color: #ffffff;
+    color: black;
     border: none;
     border-radius: 10px; 
     border: 2px solid #000000;
@@ -68,8 +73,3 @@ header {
     transition: background-color 0.3s ease;
     margin-bottom: 7em;
 }
-
-.Category button:hover {
-    background-color: #8CCAB5;
-}
-
