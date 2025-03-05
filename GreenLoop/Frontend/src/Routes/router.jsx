@@ -4,6 +4,7 @@ import LandingPage from '../Components/LandingPage.jsx';
 import Contact from '../Components/Contact.jsx';
 import AboutUs from '../Components/aboutUs.js';
 import Products from '../Components/Products.jsx';
+import Login from '../Components/login.jsx';
 
 const router = createHashRouter([
   {
@@ -26,6 +27,10 @@ const router = createHashRouter([
         path: "/Produkter",
         element: <Products />
       },
+      {
+        path: "/Login",
+        element: <Login />
+      }
     ]
   }
 ]);

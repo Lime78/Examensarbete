@@ -11,6 +11,7 @@ function Footer() {
           <NavLink to="/OmOss" className="text-white text-lg">Om Oss</NavLink>
           <NavLink to="/Contact" className="text-white text-lg">Kontakt</NavLink>
           <NavLink to="/Produkter" className="text-white text-lg">Produkter</NavLink>
+          <NavLink to="/Login"><h1>Logga in</h1></NavLink>
         </div>
       </div>
     </footer>

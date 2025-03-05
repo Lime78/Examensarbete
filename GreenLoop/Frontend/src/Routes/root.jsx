@@ -15,6 +15,7 @@ const Root = () => {
 			<NavLink to="/" className="header-options"></NavLink>
 			<NavLink to="/Produkter" className="header-options"></NavLink>
 			<NavLink to="/OmOss" className="header-options"></NavLink>
+			<NavLink to="/Login" className="header-options"></NavLink>
             </div>
 		</header>
 

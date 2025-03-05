@@ -7,6 +7,7 @@ import Contact from './Contact.jsx';
 import Logo_Svart from '../assets/Logo_Svart.svg';
 import Logo_Vit from '../assets/Logo_Vit.svg';
 import LandingImg from '../assets/LandingImg.png';
+import InventoryIcon from '../assets/InventoryIcon.svg';
 
 function Landing() {
   return (
@@ -38,12 +39,31 @@ function Landing() {
         <p>Kategorier</p>
       </div>
       <div className="Category">
-        <button>Priser</button>
-        <button>Utbud</button>
+       <button>Tjänster</button> 
+       <button>Boka Möte</button> 
         <button>Miljö</button>
+
+        </div>
         
-        
+        <div className="features">
+        <div className="feature-item">
+          <img src={InventoryIcon} alt="Inventory Icon" className="feature-icon" />
+          <h3>Inventering</h3>
+          <p>Med vår webbapp och en mobiltelefon kan ni snabbt, enkelt och strukturerat inventera möbler och inventarier.</p>
+        </div>
+        <div className="feature-item">
+          {/* <img src={FurnitureLibraryIcon} alt="Furniture Library Icon" className="feature-icon" /> */}
+          <h3>Möbelbibliotek</h3>
+          <p>Möbelbibliotek inventerar ditt möbelbestånd och ger ansvariga en helt ny överblick.</p>
+        </div>
+        <div className="feature-item">
+          {/* <img src={BookingIcon} alt="Booking Icon" className="feature-icon" /> */}
+          <h3>Boka möbler</h3>
+          <p>Gör möbler bokningsbara för alla i organisationen. Håll koll på flödet från reservation till leverans.</p>
+        </div>
       </div>
+
+      
       
     </>
   );
