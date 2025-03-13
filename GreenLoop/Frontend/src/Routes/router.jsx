@@ -5,6 +5,10 @@ import Contact from '../Components/Contact.jsx';
 import AboutUs from '../Components/aboutUs.js';
 import Products from '../Components/Products.jsx';
 import Login from '../Components/login.jsx';
+import ProtectedRoute from '../Components/ProtectedRouter.jsx'; 
+import Profile from '../Components/profile.jsx';
+import SendMessage from '../Components/SendMessage.jsx';
+import Channels from '../Components/Channels.jsx';
 
 const router = createHashRouter([
   {
@@ -24,12 +28,36 @@ const router = createHashRouter([
         element: <AboutUs />
       },
       {
+        path: "/SendMessages",
+        element: <SendMessage />
+      },
+      {
+        path: "/channels",
+        element: (
+          <ProtectedRoute>
+            <Channels />
+          </ProtectedRoute>
+        )
+      },
+      {
         path: "/Produkter",
-        element: <Products />
+        element: (
+          <ProtectedRoute>
+            <Products />
+          </ProtectedRoute>
+        )
       },
       {
         path: "/Login",
         element: <Login />
+      },
+      {
+        path: "/Profile",
+        element: (
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        )
       }
     ]
   }

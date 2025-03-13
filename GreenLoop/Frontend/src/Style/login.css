@@ -12,36 +12,35 @@
     margin-bottom: 20px;
   }
   
-  input {
-    width: 300px;
+  .input-field {
+    /* Add your input field styles here */
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  button {
-    width: 300px;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.submit-button, .toggle-button, .back-button {
+    /* Add your button styles here */
+    padding: 10px 20px;
+    margin: 10px 0;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 5px;
+    background-color: #255544;
+    color: white;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .error {
-    color: red;
-    margin-top: 10px;
-  }
-  
-  .success {
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover, .toggle-button:hover, .back-button:hover {
+    background-color: #1e453a;
+}
+
+.success {
     color: green;
-    margin-top: 10px;
-  }
+}
+
+.error {
+    color: red;
+}

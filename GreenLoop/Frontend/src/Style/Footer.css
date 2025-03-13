@@ -1,31 +1,88 @@
+/* Footer.css */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
   background-color: #255544;
   color: white;
   text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
+  padding: clamp(1rem, 2vw, 2rem) 0;
   width: 100%;
+  flex-shrink: 0; /* Prevents footer from shrinking */
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-links {
-  margin-top: 10px;
+  margin-top: 1rem;
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 2vw, 2rem);
+  justify-content: center;
 }
 
 .footer-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  white-space: nowrap;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 1rem 0;
+  }
+
+  .footer-content {
+    padding: 0 0.5rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-links {
+    margin-top: 0.5rem;
+  }
+
+  .footer-links a {
+    font-size: 0.9rem;
+  }
 }

@@ -1,0 +1,76 @@
+/* Overlay to cover the background */
+.send-message-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Popup container */
+.send-message-popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px; /* Limit the width */
+    text-align: center;
+}
+
+/* Heading */
+.send-message-popup h2 {
+    margin: 0 0 15px;
+    font-size: 1.5rem;
+}
+
+/* Error message */
+.send-message-popup .error {
+    color: red;
+    margin: 10px 0;
+}
+
+/* Textarea styling */
+.send-message-popup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none; /* Prevent resizing */
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Button group */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Buttons */
+.send-message-popup button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.send-message-popup button:first-child {
+    background-color: #4CAF50; /* Green for "Skicka" */
+    color: white;
+}
+
+.send-message-popup button:last-child {
+    background-color: #f44336; /* Red for "Avbryt" */
+    color: white;
+}
+
+.send-message-popup button:hover {
+    opacity: 0.9;
+}

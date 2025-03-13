@@ -10,9 +10,8 @@ const firebaseConfig = {
     messagingSenderId: "136736555738",
     appId: "1:136736555738:web:db99dae404909fed349be3",
     measurementId: "G-3ZHGZ0NET3"
-    };
+};
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
@@ -21,28 +20,27 @@ const useStore = create((set) => ({
     electronicsList: [],
     toysList: [],
     cart: [],
+    messages: [],
 
     setProductList: (productList) => set({ productList }),
     setElectronicsList: (electronicsList) => set({ electronicsList }),
     setToysList: (toysList) => set({ toysList }),
+    setMessages: (messages) => set({ messages }),
 
     fetchProducts: async () => {
         try {
-            // Fetch product list
             const productSnapshot = await getDocs(collection(db, "produktList"));
             const products = productSnapshot.docs.map(doc => ({
                 id: doc.id,
                 ...doc.data()
             }));
 
-            // Fetch electronics list
             const electronicsSnapshot = await getDocs(collection(db, "electronicsList"));
             const electronics = electronicsSnapshot.docs.map(doc => ({
                 id: doc.id,
                 ...doc.data()
             }));
 
-            // Fetch toys list
             const toysSnapshot = await getDocs(collection(db, "toysList"));
             const toys = toysSnapshot.docs.map(doc => ({
                 id: doc.id,
@@ -52,6 +50,22 @@ const useStore = create((set) => ({
             set({ productList: products, electronicsList: electronics, toysList: toys });
         } catch (error) {
             console.error("Error fetching products:", error);
+        }
+    },
+
+    fetchMessages: async (userId) => {
+        try {
+            const messagesSnapshot = await getDocs(collection(db, "messages"));
+            const messages = messagesSnapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data()
+            })).filter(
+                message => message.recipientId === userId || message.senderId === userId
+            );
+            set({ messages });
+            return messages;
+        } catch (error) {
+            console.error("Error fetching messages:", error);
         }
     },
 
