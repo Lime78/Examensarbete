@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth, db } from "../Data/Firebase.js"; // Ensure db is imported
+import { auth, db } from "../Data/Firebase.js";
 import { collection, query, where, getDocs, addDoc } from "firebase/firestore";
 import "../style/login.css";
 import Footer from './Footer.jsx'; 
@@ -9,10 +9,10 @@ import Footer from './Footer.jsx';
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [username, setUsername] = useState(""); // Add username state
+    const [username, setUsername] = useState("");
     const [message, setMessage] = useState("");
     const [isRegistering, setIsRegistering] = useState(false);
-    const navigate = useNavigate(); // Use the useNavigate hook
+    const navigate = useNavigate(); 
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -38,7 +38,7 @@ function Login() {
         e.preventDefault();
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-            await updateProfile(userCredential.user, { displayName: username }); // Update profile with username
+            await updateProfile(userCredential.user, { displayName: username }); 
             await addDoc(collection(db, "users"), {
                 username: username,
                 email: email

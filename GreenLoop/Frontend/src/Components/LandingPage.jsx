@@ -35,7 +35,7 @@ function Landing() {
           Hos GreenLoop värnar vi om både miljön och effektiv resursanvändning. Har ni överbliven elektronik, möbler eller andra
           föremål som inte längre används? Eller saknar ni något som en annan avdelning i er kommun kan ha till övers? 
           Genom vår plattform kan ni enkelt omfördela resurser, minska onödiga inköp och bidra till en mer hållbar framtid – samtidigt 
-          som ni sparar pengar. Tillsammans skapar vi en smartare och mer miljövänlig kommun!
+          som ni sparar pengar. Tillsammans skapar vi en smartare och mer miljövänlig värld!
         </p>
       </div>
 

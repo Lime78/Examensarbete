@@ -11,7 +11,7 @@ const AboutUs = () => {
       <header>
         <img src={Logo_Vit} alt="Logo" className="logo" />
         <div className="menu">
-          <NavLink to="/"><h1>Home</h1></NavLink>
+          <NavLink to="/"><h1>Hem</h1></NavLink>
           <NavLink to="/OmOss"><h1>Om Oss</h1></NavLink>
           <NavLink to="/Contact"><h1>Kontakt</h1></NavLink>
           <NavLink to="/Produkter"><h1>Produkter</h1></NavLink>
@@ -24,9 +24,9 @@ const AboutUs = () => {
         {/* Main About Us Section */}
         <div className="about-us-content">
           <div className="text-section">
-            <h1 className="about-title">About Us</h1>
+            <h1 className="about-title">Om oss</h1>
             <p className="about-description">
-            GreenLoop är en webbshop skapad för att ge nytt liv åt möbler, elektronik, kläder och andra produkter genom återanvändning. Jag heter Liam och är frontend-utvecklare, och jag startade GreenLoop med visionen om en mer hållbar framtid. Genom att främja resursdelning och cirkulär konsumtion vill vi minska onödigt avfall och inspirera fler att göra miljövänliga val. Vårt mål är att göra det enkelt och tillgängligt för alla att hitta och ge vidare kvalitetsprodukter, samtidigt som vi tillsammans bidrar till en mer hållbar värld.            {/* <button className="learn-more-btn">Learn More</button> */}
+            GreenLoop är en webbshop skapad för att ge nytt liv åt möbler, elektronik, leksaker och andra produkter genom återanvändning. Jag heter Liam och är frontend-utvecklare, och jag startade GreenLoop med visionen om en mer hållbar framtid. Genom att främja resursdelning och cirkulär konsumtion vill vi minska onödigt avfall och inspirera fler att göra miljövänliga val. Vårt mål är att göra det enkelt och tillgängligt för alla att hitta och ge vidare kvalitetsprodukter, samtidigt som vi tillsammans bidrar till en mer hållbar värld.            {/* <button className="learn-more-btn">Learn More</button> */}
             </p>
           </div>
           <div className="image-section">

@@ -53,6 +53,7 @@ header {
     color: #000000;
     font-size: clamp(1rem, 3vw, 1.5rem);
     text-align: center;
+    font-style: italic;
 }
 
 .features {
